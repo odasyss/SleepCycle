@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>{{ app_title }}</title>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="text-center py-10">
+        <h1 class="text-4xl font-bold mb-4">Sleep Cycle Calculator</h1>
+        <div id="digital-clock" class="text-2xl mb-8"></div>
+        <form id="sleep-form">
+          <div class="options-container">
+            <div id="wake-up-container" class="option-container mb-4">
+              <input type="radio" id="wake-up-option" name="calculation-option" value="wake-up" checked>
+              <label for="wake-up-option">I need to wake up at:</label>
+              <input type="time" id="wake-up-time" name="wake-up-time" required>
+            </div>
+            <div id="go-to-bed-container" class="option-container mb-4">
+              <input type="radio" id="go-to-bed-option" name="calculation-option" value="go-to-bed">
+              <label for="go-to-bed-option">I will go to bed at:</label>
+              <input type="time" id="go-to-bed-time" name="go-to-bed-time" required>
+            </div>
+          </div>
+          <button type="submit" id="calculate-button" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">Calculate</button>
+        </form>
+        <button id="sleep-now-button" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors">Sleep Now</button>
+        <div id="result-container" class="mt-8"></div>
+        <div id="info-section" class="mt-8 text-center"></div>
+      </div>
+    </div>
+    <script src="/static/js/sleep_calculator.js"></script>
+  </body>
+</html>
