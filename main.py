@@ -1,4 +1,3 @@
-import logging
 from flask import Flask, render_template
 from database import db, run_migrations
 
@@ -18,4 +17,5 @@ def home_route():
     return render_template("sleep_calculator.html", app_title=app.config['APP_TITLE'])
 
 if __name__ == "__main__":
+    # app.run()
     app.run(host='0.0.0.0', port=8080)

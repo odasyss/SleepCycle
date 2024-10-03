@@ -1,7 +1,6 @@
 import os
 import logging
 from flask import Flask
-from routes import register_routes
 from database import db, run_migrations
 from flask_sqlalchemy import SQLAlchemy
 
@@ -14,8 +13,6 @@ def create_initialized_flask_app():
 
     # Run migrations
     run_migrations(app)
-
-    register_routes(app)
 
     app.config['APP_TITLE'] = 'Sleep Cycle Calculator'
 
